@@ -3,13 +3,23 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "<h1> Welcome to samuel's website !!!</h1>"
+    return "<h3> Greetings welcome to Angel's digital world !!!</h3>"
 
 
 @app.route('/animal')
 def animal():
-    animals = ["dog"," kangaroo", "cat", "deer", "lion"]
+    animals = ["dog"," kangaroo", "cat", "deer", "chimpanzee", "dinosaur", "moa"]
     return render_template("animal.html", animal=animals) 
+
+@app.route('/books')
+def book():
+    books= ["cinderella", "rapunzel", "tym", "tyu", "yolo", "sil"]
+    return render_template("books.html", book=books)
+
+@app.route('/cities')
+def cities():
+    cities=["bfd", "ldn", "ncl", "mgm", "lpl", "lsr"]
+    return render_template("cities.html", city=cities)
 
 @app.route('/product')
 def product():
